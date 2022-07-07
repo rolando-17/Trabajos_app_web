@@ -1,0 +1,1209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+    
+    
+}
+
+body {
+    /*height: 100vh;*/
+    /*display: flex;*/
+    /*align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color: lightblue
+
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* BARRA DE NAVEGACION*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fef1f1;
+    color: #ffff;
+}
+
+.nav-links a {
+    color: blue;
+    font-weight: bold; 
+}
+
+
+
+
+   /* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+   /* DROPDOWN MENU */
+.services {
+    position: relative; 
+}
+
+.dropdown {
+    background-color: white;
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 31px;
+}
+
+.dropdown li + li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+
+/*RESPONSIVE NAVBAR MENU INCIO*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+   /* APLICANDO EL METODO RESPONSIVE PARA LOS DISPOSITIVOS MOVILES */
+@media (max-width: 768px) {
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color:#fef1f1;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+    }
+
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+        color: black;
+    }
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+    .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+}
+
+.page-content {
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.personas-container{
+    margin: 15px;
+    padding: 60px 16px;
+	text-align: center;
+}
+
+.personas-container:hover{
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.personas-container img{
+    width: 200px;
+}
+
+.personas-container button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+}
+
+.personas-container button:hover{
+    background: #fff;
+    color: black;
+}
+
+.heading{
+    color:brown;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*AREA DEL MODALES*/
+
+
+.modal {
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal:checked ~ .modal{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor {
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal:checked ~ .modal .contenedor{
+	transform: translateY(0%);
+} 
+.contenedor header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido {
+	width: 100%;
+	padding: 10px; 
+}
+.contenido h3{
+	margin-bottom: 10px;
+}
+.contenido p{
+	margin-bottom: 7px;
+}
+#btn-modal{
+	display: none;
+}
+
+
+.lbl-modal:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal{
+    top: 30px;
+    position: relative;
+    
+}
+
+
+/*INICIO DEL BOTON DE CONTRATAR*/
+.addToCart:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.addToCart{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .addToCart{
+    top: 30px;
+    position: relative;
+    
+}
+
+/*FINALIZACION DEL BOTON DE CONTRATAR*/
+
+/* ? SHOPPING CART */
+.shopping-cart-items {
+	padding: 20px 0px;
+  }
+  
+  .shopping-cart-header {
+	border-bottom: 1px solid #ccc;
+  }
+  
+  .shopping-cart-image {
+	max-width: 80px;
+	border-radius: 20px;
+  }
+  
+  .shopping-cart-quantity-input {
+	max-width: 45px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: #eee;
+	padding: 5px;
+  }
+  
+  .shopping-cart-total {
+	min-height: 96px;
+  }
+  
+
+
+
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor {
+		width: 95%;
+	}
+	.personas-container .boton_contratar{
+		top: 50px;
+		position: relative;
+		
+	}
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________SEGUNDO MODAL 01_______XXXXXXXXX*/
+
+.modal01{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal01:checked ~ .modal01{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor01{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal01:checked ~ .modal01 .contenedor01{
+	transform: translateY(0%);
+} 
+.contenedor01 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor01 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido01{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido01 h3{
+	margin-bottom: 10px;
+}
+.contenido01 p{
+	margin-bottom: 7px;
+}
+#btn-modal01{
+	display: none;
+}
+
+
+.lbl-modal01:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal01{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal01{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor01{
+		width: 95%;
+	}
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________TERCER MODAL 02_______XXXXXXXXX*/
+
+.modal02{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal02:checked ~ .modal02{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor02{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal02:checked ~ .modal02 .contenedor02{
+	transform: translateY(0%);
+} 
+.contenedor02 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor02 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido02{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido02 h3{
+	margin-bottom: 10px;
+}
+.contenido02 p{
+	margin-bottom: 7px;
+}
+#btn-modal02{
+	display: none;
+}
+
+
+.lbl-modal02:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal02{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal02{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor02{
+		width: 95%;
+	}
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________MODAL 03_______XXXXXXXXX*/
+
+.modal03{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal03:checked ~ .modal03{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor03{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal03:checked ~ .modal03 .contenedor03{
+	transform: translateY(0%);
+} 
+.contenedor03 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor03 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido03{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido03 h3{
+	margin-bottom: 10px;
+}
+.contenido03 p{
+	margin-bottom: 7px;
+}
+#btn-modal03{
+	display: none;
+}
+
+
+.lbl-modal03:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal03{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal03{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor03{
+		width: 95%;
+	}
+}
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________MODAL 04_______XXXXXXXXX*/
+
+.modal04{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal04:checked ~ .modal04{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor04{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal04:checked ~ .modal04 .contenedor04{
+	transform: translateY(0%);
+} 
+.contenedor04 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor04 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido04{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido04 h3{
+	margin-bottom: 10px;
+}
+.contenido04 p{
+	margin-bottom: 7px;
+}
+#btn-modal04{
+	display: none;
+}
+
+
+.lbl-modal04:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal04{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal04{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor04{
+		width: 95%;
+	}
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________MODAL 05_______XXXXXXXXX*/
+
+.modal05{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal05:checked ~ .modal05{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor05{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal05:checked ~ .modal05 .contenedor05{
+	transform: translateY(0%);
+} 
+.contenedor05 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor05 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido05{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido05 h3{
+	margin-bottom: 10px;
+}
+.contenido05 p{
+	margin-bottom: 7px;
+}
+#btn-modal05{
+	display: none;
+}
+
+
+.lbl-modal05:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal05{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal05{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor05{
+		width: 95%;
+	}
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________MODAL 06_______XXXXXXXXX*/
+
+.modal06{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal06:checked ~ .modal06{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor06{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal06:checked ~ .modal06 .contenedor06{
+	transform: translateY(0%);
+} 
+.contenedor06 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor06 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido06{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido06 h3{
+	margin-bottom: 10px;
+}
+.contenido06 p{
+	margin-bottom: 7px;
+}
+#btn-modal06{
+	display: none;
+}
+
+
+.lbl-modal06:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal06{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal06{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor06{
+		width: 95%;
+	}
+}
+
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________MODAL 07_______XXXXXXXXX*/
+
+.modal07{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal07:checked ~ .modal07{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor07{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal07:checked ~ .modal07 .contenedor07{
+	transform: translateY(0%);
+} 
+.contenedor07 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor07 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido07{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido07 h3{
+	margin-bottom: 10px;
+}
+.contenido07 p{
+	margin-bottom: 7px;
+}
+#btn-modal07{
+	display: none;
+}
+
+
+.lbl-modal07:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal07{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal07{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor07{
+		width: 95%;
+	}
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________MODAL 08_______XXXXXXXXX*/
+
+.modal08{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal08:checked ~ .modal08{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor08{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal08:checked ~ .modal08 .contenedor08{
+	transform: translateY(0%);
+} 
+.contenedor08 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor08 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido08{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido08 h3{
+	margin-bottom: 10px;
+}
+.contenido08 p{
+	margin-bottom: 7px;
+}
+#btn-modal08{
+	display: none;
+}
+
+
+.lbl-modal08:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal08{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal08{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor08{
+		width: 95%;
+	}
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_________MODAL 09_______XXXXXXXXX*/
+
+.modal09{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal09:checked ~ .modal09{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor09{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+#btn-modal09:checked ~ .modal09 .contenedor09{
+	transform: translateY(0%);
+} 
+.contenedor09 header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+.contenedor09 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido09{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido09 h3{
+	margin-bottom: 10px;
+}
+.contenido09 p{
+	margin-bottom: 7px;
+}
+#btn-modal09{
+	display: none;
+}
+
+
+.lbl-modal09:hover{
+	background: #fff;
+    color: black;
+}
+
+
+.lbl-modal09{
+    
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: blue;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+    border-radius:10px;
+    
+}
+
+.personas-container .lbl-modal09{
+    top: 30px;
+    position: relative;
+    
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor09{
+		width: 95%;
+	}
+}
+/*FINAL DEL AREA DEL MODALES*/

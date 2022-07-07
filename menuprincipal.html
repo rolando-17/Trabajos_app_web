@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/menuprincipal.css">
+    <link rel="icon" href="tools.png">
+    <title>Menu Principal</title>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="tools.png" alt="herramientas">
+        </div>
+        <!--MENU DE NAVEGACION -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+               <input type="checkbox" id="checkbox_toggle" />
+               <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+               <!-- NAVIGATION MENUS -->
+            <div class="menu" id="menu">
+                       <li><a href="buscarpersonal.html">BUSCAR PERSONAL</a></li>
+                       <!--<li><a href="/">QUIENES SOMOS</a></li>-->
+                       <li class="services">
+                           <a href="#">CATEGORÍAS</a>
+                                <!-- DROPDOWN MENU -->
+                    <ul class="dropdown">
+                        <li><a href="carpinteros.html">CARPINTERIA</a></li>
+                        <li><a href="plomeria.html">PLOMERIA</a></li>
+                        <li><a href="albaniles.html">ALBAÑILERIA</a></li>
+                        <li><a href="pintores.html">PINTORES</a>
+                        <!--<li><a href="/">Dropdown 4</a></li>-->
+                    </ul>
+                    </li>
+                        <li><a href="#" id="myBtn">COLABORADORES</a></li>
+                        <!--<li><a href="videos.html">Videos</a></li>-->
+                        <li><a href="index.html" id="logout">SALIR</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Job App Colaboradores</h2>
+          </div>
+          <div class="modal-body">
+            <p>Fierro y tubulares</p>
+            <p>Ferreteria el Castor</p>
+            <p>Home Depot</p>
+            <p>Truper</p>
+            <p>Pinturas Berel</p>
+            <p>Construrama</p>
+          </div>
+          <!--<div class="modal-footer">
+            <h3> </h3>
+          </div>-->
+        </div>
+      
+      </div>
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <!--NUEVO SLIDER DE CARROUSEL-->
+    <div class="va-carrousel-section">
+        <div class="va-whitewrap">
+            <div class="div-center">
+                <h1 class="h4 va-carrousel-title">PUBLICIDAD Y EMPLEOS</h1>
+                <Br>
+            </div>
+    
+            <div id="va_container">
+                <button class="deals-scroll-left deals-paddle">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                        class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                        </path>
+                    </svg>
+                </button>
+    
+                <div class="va-carrousel-flexbox">
+                    <div class="va-card"> <a class="link-plain" target="_blank"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/plomero1.jpg">
+                            <div class="va-title">Se solicita plomero </div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.occ.com.mx/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/occmundial.jpg">
+                            <div class="va-title">Empleos</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.construrama.com/ferreteriaselcastor"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/Cemex-construrama.jpg">
+                            <div class="va-title">Construrama </div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/albañil.jpg">
+                            <div class="va-title">Se solicita albañil </div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://fierroytubulares.com.mx/sucursal-periferico"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/fierroytubulares.jpg">
+                            <div class="va-title"> Fierro y Tubulares Sucursal Periferico</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.truper.com/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/truper.png">
+                            <div class="va-title">Truper</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.facebook.com/MadereriaFerreteriaVeracruz/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/madereria_veracruz.jpg">
+                            <div class="va-title">Madereria Veracruz </div>
+                            
+                        </a> </div>
+                 
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://mx.dewalt.global/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/dewalt.png">
+                            <div class="va-title">Dewalt</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://berel-pinturas.negocio.site/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/berel.png">
+                            <div class="va-title">Berel</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://centromkt.com/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/makita.jpg">
+                            <div class="va-title">Centro Makita</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.homedepot.com.mx/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/home_depot.jpg">
+                            <div class="va-title">Home Depot Matamoros</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.officedepot.com.mx/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/office_depot.png">
+                            <div class="va-title">Office Depot</div>
+                            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.diheresa.com/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/diheresa.jpg">
+                            <div class="va-title">Diheresa</div>
+            
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://fierroytubulares.com.mx/sucursal-solidaridad"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/sucursal_soli.jpg">
+                            <div class="va-title">Fierro y Tubulares Sucursal Solidaridad</div>
+                        </a> </div>
+                    <div class="va-card"> <a class="link-plain" target="_blank" href="https://www.facebook.com/FerreteriasJabali/"> <img class="va-thumbnail"
+                                src="./img_menuprincipal/el_jabali.jpg">
+                            <div class="va-title">Ferreteria y Materiales El Jabali</div>
+                        </a> </div>
+                </div>
+    
+                <button class="deals-scroll-right deals-paddle">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+    
+    
+        </div>
+    
+    </div>
+
+
+
+    
+
+    <div class="container">
+	
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images" />
+        
+        <div class="slide_img" id="one">			
+                
+                <img src="24hrsservicios.jpg">
+                
+                    <label class="prev" for="i4"><span>&#x2039;</span></label>
+                    <label class="next" for="i2"><span>&#x203a;</span></label>	
+            
+        </div>
+        
+        <div class="slide_img" id="two">
+            
+                <img src="alba.jpg" >
+                
+                    <label class="prev" for="i1"><span>&#x2039;</span></label>
+                    <label class="next" for="i3"><span>&#x203a;</span></label>
+            
+        </div>
+                
+        <div class="slide_img" id="three">
+                <img src="slide_plomeria.jpg">	
+                
+                    <label class="prev" for="i2"><span>&#x2039;</span></label>
+                    <label class="next" for="i4"><span>&#x203a;</span></label>
+        </div>
+    
+    
+        <div class="slide_img" id="four">
+                <img src="sliderherramientas.jpg">	
+                
+                    <label class="prev" for="i3"><span>&#x2039;</span></label>
+                    <label class="next" for="i1"><span>&#x203a;</span></label>
+    
+        </div>
+    
+        <div id="nav_slide">
+            <label for="i1" class="dots" id="dot1"></label>
+            <label for="i2" class="dots" id="dot2"></label>
+            <label for="i3" class="dots" id="dot3"></label>
+            <label for="i4" class="dots" id="dot4"></label>
+        </div>
+            
+    </div>
+
+
+    
+
+    <article class="container--redes">
+        <!--incio de el primer icono-->
+          <div class="icon">
+            <a class="icon-primary" href="#">f</a>	
+      
+            <div class="container-description">
+              <a class="icon-description" href="#">Comparte en facebook</a>	
+            </div>
+          </div>
+        <!--incio segundo icono-->
+          <div class="icon">
+            <a class="icon-primary color-twitter" href="#">t</a>	
+      
+            <div class="container-description ">
+              <a class="icon-description color-twitter" href="#">Comparte en Twitter</a>	
+            </div>
+          </div>
+        <!--incio tercer icono-->
+          <div class="icon">
+            <a class="icon-primary color-googleplus" href="#">g+</a>	
+      
+            <div class="container-description">
+              <a class="icon-description color-googleplus" href="#">Comparte en Google plus</a>	
+            </div>
+          </div>
+           
+      </article>
+
+    <!--<div class="contenido">
+        <div class="text01">
+            <h1></h1>
+        </div>
+
+        <div class="text02">
+            <h1></h1>
+
+        </div>
+
+        <div class="text03">
+            <h1></h1>
+        </div>
+    </div>-->
+
+
+    <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">Información</h1>
+              
+          <h2>Contacto</h2>
+          
+          <address>
+            Matamoros Tamaulipas 8681543496<br>
+                
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+          </address>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Enlaces</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Quejas y comentarios</a>
+              </li>
+      
+              <li>
+                <a href="#">Donde encontrarnos</a>
+              </li>
+                  
+              <li>
+                <a href="#">Mas información</a>
+              </li>
+            </ul>
+          </li>
+          
+          <!--<li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Technology</h2>
+            
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">Hardware Design</a>
+              </li>
+              
+              <li>
+                <a href="#">Software Design</a>
+              </li>
+              
+              <li>
+                <a href="#">Digital Signage</a>
+              </li>
+              
+              <li>
+                <a href="#">Automation</a>
+              </li>
+              
+              <li>
+                <a href="#">Artificial Intelligence</a>
+              </li>
+              
+              <li>
+                <a href="#">IoT</a>
+              </li>
+            </ul>
+          </li>-->
+          
+          <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Politica de Privacidad</a>
+              </li>
+              
+              <li>
+                <a href="#">Terminos y Condiciones</a>
+              </li>
+              
+              <li>
+                <a href="#">Ubicación</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2022 Job App - Todos los derechos reservados</p>
+          
+          <div class="legal__links">
+            <span>Made with <span class="heart">bootstrap</span></span>
+          </div>
+        </div>
+      </footer>
+
+    <script src="./javascripts/menuprin.js"></script>
+    <script src="./javascripts/menuprincipal.js"></script>
+</body>
+</html>

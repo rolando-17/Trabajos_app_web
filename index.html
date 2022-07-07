@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="tools.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Job App</title>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        //import { initializeApp } from "firebase/app";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyBasSTGYZ7Zb6w__IXqOE33h7g4y8U_Qbw",
+        authDomain: "trabajos-app.firebaseapp.com",
+        projectId: "trabajos-app",
+        storageBucket: "trabajos-app.appspot.com",
+        messagingSenderId: "641136862486",
+        appId: "1:641136862486:web:96af9e8d8563401e149c37"
+        };
+
+        // Initialize Firebase
+        //const app = initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+          
+        </div>
+        <!--MENU DE NAVEGACION -->
+        <ul class="nav-links">
+         <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu" id="menu">
+                    <li><a href="#" id="myBtn">QUE HACEMOS</a></li>
+                    <li><a href="#" id="myBtn2">QUIENES SOMOS</a></li>
+                <!-- DROPDOWN MENU -->
+                </li>
+                    <li><a href="#" id="myBtn3">COLABORADORES</a></li>
+            </div>
+        </ul>
+    </nav>
+
+     <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+     <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Job App</h2>
+          </div>
+          <div class="modal-body">
+            <p>En base a estas aplicaciones buscamos crear una aplicación diferente pero para ayudar a las personas que no tienen una profesión pero saben hacer trabajos 
+                como de albañilería, carpintería, plomería, etc. 
+                Buscamos ayudar a estas personas brindándole una aplicación en la que ellos pueden ofrecer sus servicios y así también 
+                ayuda a las demás personas que no saber hacer dichos trabajos a buscar quién haga los trabajos por ellos.
+                <br> <br>
+                Esta aplicación facilita a brindar la confianza entre las dos personas ya que si existe algún problema se podrá reportar al trabajador 
+                y así las demás personas que quieran un servicio sabrán que dicho trabajador podría estafarlos.
+                
+            </p>
+          </div>
+          <!--<div class="modal-footer">
+            <h3> </h3>
+          </div>-->
+        </div>
+      
+      </div>
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+    <div id="myModal2" class="modal2">
+        <!-- Modal content -->
+        <div class="modal-content2">
+          <div class="modal-header2">
+            <span class="close2">&times;</span>
+            <h2>Job App</h2>
+          </div>
+          <div class="modal-body2">
+            <p> Una aplicación diseñada para el beneficio común y ayudarse mutuamente, uno de los objetivos de está es poder encontrar a una persona 
+                dedicada y responsable que pueda ayudarnos a darle mantenimiento al hogar ya que hay cosas que muchos no sabemos hacer pero otras personas sí.
+                <br> <br>
+                Lo que buscamos al diseñar esta aplicación es ayudar a personas que hacen muy buen trabajo pero no son muy conocidos en el ambiente laboral 
+                y por otro lado también buscamos que las personas encuentren a una persona que les pueda brindar un buen servicio de mantenimiento ya que hay muchas 
+                personas estafadoras que empiezan el trabajo pero nunca lo terminan.
+                <br> <br>
+                Queremos mejorar la confianza con este tipo de personas que saben trabajar muy bien y poder contar con un buen servicio.
+                
+            </p>
+          </div>
+          <!--<div class="modal-footer2">
+            <h3></h3>
+          </div>-->
+        </div>
+      
+    </div>
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+    <main>
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrarse</button>
+                </div>
+            </div>
+
+            <!--Formulario de Login y registro AQUI ES DONDE EMPIEZA EL LOGIN Y EL REGISTER-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form action="" class="formulario__login" id="login_id">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="email" id="login_email" placeholder="Correo Electronico">
+                    <input type="password" id="login_password" placeholder="Contraseña">
+                    <button>Entrar</button>
+                </form>
+
+                <!--Registro-->
+                <form action="" class="formulario__register" id="register_id">
+                    <h2>Regístrarse</h2>
+                    <input type="text" placeholder="Nombre completo">
+                    <input type="email" id="email" placeholder="Correo Electronico">
+                    <input type="text" placeholder="Usuario">
+                    <input type="password" id="password" placeholder="Contraseña">
+                    <button>Regístrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    
+</body>
+
+<script type="module" src="./javascripts/script.js"></script>
+</html>

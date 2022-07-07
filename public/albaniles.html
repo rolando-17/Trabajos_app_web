@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/albaniles.css">
+    <link rel="icon" href="tools.png">
+    <title>Albañileria</title>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="tools.png" alt="herramientas">
+        </div>
+        <!--MENU DE NAVEGACION -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+               <input type="checkbox" id="checkbox_toggle" />
+               <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+               <!-- NAVIGATION MENUS -->
+            <div class="menu" id="menu">
+                        <li><a href="menuprincipal.html">INICIO</a></li>
+                        <!--<li><a href="/">QUIENES SOMOS</a></li>-->
+                        <li class="services">
+                            <a href="#">CATEGORÍAS</a>
+                                <!-- DROPDOWN MENU -->
+                    <ul class="dropdown"> 
+                        <li><a href="carpinteros.html">CARPINTERIA</a></li>
+                        <li><a href="plomeria.html">PLOMERIA</a></li>
+                        <li><a href="albaniles.html">ALBAÑILERIA</a></li>
+                        <li><a href="pintores.html">PINTORES</a>
+                        <!--<li><a href="/">Dropdown 4</a></li>-->
+                    </ul>
+                    </li>
+                    <li><a href="#">ACERCA DE NOSOTROS</a></li>
+                        <!--<li><a href="#">COLABORADORES</a></li>-->
+                        <!--<li><a href="videos.html">Videos</a></li>-->
+                        <li><a href="index.html" id="logout">SALIR</a></li>
+            </div>
+        </ul>
+    </nav>
+
+
+    <h3 class="heading">ALBAÑILES DISPONIBLES</h3>
+    <div class="page-content">
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Ricardo</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$500.00</h3>
+            <input type="checkbox" id="btn-modal">
+            <label for="btn-modal" class="lbl-modal">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal">
+                <div class="contenedor">
+                    <header>¡Bienvenidos!</header>
+                    <label for="btn-modal">X</label>
+                    <div class="contenido">
+                        <h3>HOLA QUE TAL</h3>
+                        <p><!-- Agregar un mensaje --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Daniel</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$600.00</h3>
+            <input type="checkbox" id="btn-modal01">
+            <label for="btn-modal01" class="lbl-modal01">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal01">
+                <div class="contenedor01">
+                    <header>¡Bienvenidosxdverv!</header>
+                    <label for="btn-modal01">X</label>
+                    <div class="contenido01">
+                        <h3><!-- Agregar un titulo --></h3>
+                        <p><!-- Agregar un mensaje --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: David</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$500.00</h3>
+            <input type="checkbox" id="btn-modal02">
+            <label for="btn-modal02" class="lbl-modal02">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal02">
+                <div class="contenedor02">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal02">X</label>
+                    <div class="contenido02">
+                        <h3><!-- Agregar un titulo --></h3>
+                        <p><!-- Agregar un mensaje --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Francisco</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$400.00</h3>
+            <input type="checkbox" id="btn-modal03">
+            <label for="btn-modal03" class="lbl-modal03">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal03">
+                <div class="contenedor03">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal03">X</label>
+                    <div class="contenido03">
+                        <h3>Trabajos</h3>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Osvaldo</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$500.00</h3>
+            <input type="checkbox" id="btn-modal04">
+            <label for="btn-modal04" class="lbl-modal04">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal04">
+                <div class="contenedor04">
+                    <header>¡BienvenidosxdvervXDDDwcw!</header>
+                    <label for="btn-modal04">X</label>
+                    <div class="contenido04">
+                        <h3>Trabajos</h3>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Jaime</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$400.00</h3>
+            <input type="checkbox" id="btn-modal05">
+            <label for="btn-modal05" class="lbl-modal05">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal05">
+                <div class="contenedor05">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal05">X</label>
+                    <div class="contenido05">
+                        <h3>Trabajos</h3>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Pedro</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$500.00</h3>
+            <input type="checkbox" id="btn-modal06">
+            <label for="btn-modal06" class="lbl-modal06">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal06">
+                <div class="contenedor06">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal06">X</label>
+                    <div class="contenido06">
+                        <h3>Trabajos</h3>
+                        <p>Construcionnnn de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Pablo</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$400.00</h3>
+            <input type="checkbox" id="btn-modal07">
+            <label for="btn-modal07" class="lbl-modal07">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal07">
+                <div class="contenedor07">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal07">X</label>
+                    <div class="contenido07">
+                        <h3>Trabajos</h3>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Ramses</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$500.00</h3>
+            <input type="checkbox" id="btn-modal08">
+            <label for="btn-modal08" class="lbl-modal08">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal08">
+                <div class="contenedor08">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal08">X</label>
+                    <div class="contenido08">
+                        <h3>Trabajos</h3>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Victor</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$500.00</h3>
+            <input type="checkbox" id="btn-modal09">
+            <label for="btn-modal09" class="lbl-modal09">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal09">
+                <div class="contenedor09">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal09">X</label>
+                    <div class="contenido09">
+                        <h3>Trabajos</h3>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item shadow mb-4 personas-container">
+            <h2 class="item-title">Nombre: Emanuel</h2>
+            <img class="item-image" src="perfil.png" alt="Imagen del usuario">
+            <h3>Precio X Hora</h3>
+            <h3 class="item-price">$150.00</h3>
+            <input type="checkbox" id="btn-modal10">
+            <label for="btn-modal10" class="lbl-modal10">Información</label>
+            <button class="item-button btn btn-primary addToCart addToCart">Contratar</button>
+            <div class="modal10">
+                <div class="contenedor10">
+                    <header>¡BienvenidosxdvervXDDD!</header>
+                    <label for="btn-modal10">X</label>
+                    <div class="contenido10">
+                        <h3>Trabajos</h3>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                        <p>Construcion de casa habitacion en el Fracc. del Rio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- INICIO DEL CARRITO DE COMPRAS -->
+    <section class="shopping-cart">
+        <div class="container">
+            <h1 class="text-center">CARRITO</h1>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="shopping-cart-header">
+                        <h6>Personal</h6>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="shopping-cart-header">
+                        <h6 class="text-truncate">Precio</h6>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="shopping-cart-header">
+                        <h6>Cantidad de horas</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- ? START SHOPPING CART ITEMS -->
+            <div class="shopping-cart-items shoppingCartItemsContainer">
+            </div>
+            <!-- ? END SHOPPING CART ITEMS -->
+
+            <!-- START TOTAL -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="shopping-cart-total d-flex align-items-center">
+                        <p class="mb-0">Total</p>
+                        <p class="ml-4 mb-0 shoppingCartTotal">$0</p>
+                        <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-delay="2000">
+                            <div class="toast-header">
+                                <span>✅</span>
+                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="toast-body text-white">
+                                Se aumentó correctamente la cantidad
+                            </div>
+                        </div>
+                        <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                            data-target="#comprarModal">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END TOTAL -->
+
+            <!-- START MODAL COMPRA -->
+            <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Pronto recibirá su pedido</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MODAL COMPRA -->
+
+
+        </div>
+
+    </section>
+    <!-- END SECTION SHOPPING CART -->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./javascripts/albañiles.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "trabajos_app",
+  "version": "1.0.0",
+  "description": "kike_app_trabajos",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rolando Medina Rivas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "firebase": "^9.8.0"
+  }
+}
